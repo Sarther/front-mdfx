@@ -4,7 +4,7 @@
       <div class="col-md-5">
         <div class="card">
           <div class="card-header">
-            Agregar Medicamento
+            {{titleForm}}
           </div>
           <div class="card-body">
             <form class="forms-sample">
@@ -111,6 +111,7 @@ export default {
       presentation: '',
       idMedi: 0,
       isEdit: false,
+      titleForm: 'Agregar Medicamento'
     };
   },
 
@@ -131,6 +132,7 @@ export default {
     },
     editMedicine(id) {
       this.isEdit = true;
+      this.titleForm = 'Actualizar Medicamento';
       axios.get("http://localhost:8080/api/medicines/" + id).then((resp) => {
         console.log(resp);
         // this.medicines = resp.data;
@@ -147,6 +149,7 @@ export default {
       axios.put('http://localhost:8080/api/medicines/' + this.idMedi, data).then(() => {
         this.getAll();
       })
+      this.titleForm = 'Agregar Medicamento';
       this.resetInput();
     },
     deleteMedicine(id) {

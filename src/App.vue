@@ -7,6 +7,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/medicine">Medicamentos</RouterLink>
+        <RouterLink to="/doctors">Doctores</RouterLink>
+        <RouterLink to="/patients">Pacientes</RouterLink>
+        <RouterLink to="/appointments">Citas</RouterLink>
+        <RouterLink to="/diagnosis">Diagnósticos</RouterLink>
       </nav>
       </div>
     </div><br>
